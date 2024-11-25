@@ -1,17 +1,25 @@
 {
-  "name": "hackaton-backend",
-  "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
-  "dependencies": {
-    "@prisma/client": "^5.22.0",
-    "cors": "^2.8.5",
-    "express": "^4.21.1"
-  }
+   "name": "hackaton-backend",
+   "version": "1.0.0",
+   "main": "index.js",
+   "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+   },
+   "keywords": [],
+   "author": "",
+   "license": "ISC",
+   "description": "",
+   "dependencies": {
+      "bcrypt": "^5.1.1",
+      "cors": "^2.8.5",
+      "express": "^4.21.1",
+      "mongoose": "^8.8.2"
+   },
+   "imports": {
+      "#controllers/*": "./src/controllers/*.js",
+      "#models/*": "./src/models/*.js",
+      "#config/*": "./src/config/*.js",
+      "#routes/*": "./src/routes/*.js",
+      "#middlewares/*": "./src/middlewares/*.js"
+   }
 }
