@@ -1,5 +1,5 @@
 const { Schema, model } = require('mongoose');
-const userSchema = new Schema(
+const applicationSchema = new Schema(
    {
       title: { type: String, required: true },
       description: { type: String, required: true},
@@ -14,4 +14,4 @@ const userSchema = new Schema(
       versionKey: false,
    }
 );
-module.exports = model('application', userSchema);
+module.exports = model('application', applicationSchema);
