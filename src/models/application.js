@@ -3,7 +3,7 @@ const userSchema = new Schema(
    {
       title: { type: String, required: true },
       description: { type: String, required: true},
-      userEmail: { type: String, required: true },
+      userId: { type: String, required: true },
       imageURL: { type: String, required: true },
       appURL: { type: String, required: true },
       tags: { type: String, required: true},

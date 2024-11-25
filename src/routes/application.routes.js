@@ -5,13 +5,14 @@ const {
    updateApplication,
    deleteApplication,
 } = require('#controllers/application.controller');
+const auth = require('#middlewares/auth.middleware');
 
 const router = require('express').Router();
 
 router.get('/', getAll);
-router.get('/:id', getById);
-router.post('/', createApplication);
-router.put('/:id', updateApplication);
-router.delete('/:id', deleteApplication)
+router.get('/:id', auth, getById);
+router.post('/', auth, createApplication);
+router.put('/:id', auth, updateApplication);
+router.delete('/:id', auth, deleteApplication)
 
 module.exports = router;

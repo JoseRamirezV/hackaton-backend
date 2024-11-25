@@ -9,7 +9,7 @@ app.use(express.json())
 
 app.set('port', process.env.PORT || 5000)
 
-// app.use('/api/users', require('./routes/users.routes'))
+app.use('/api/users', require('./routes/users.routes'))
 app.use('/api/application', require('./routes/application.routes'))
 
 module.exports = app

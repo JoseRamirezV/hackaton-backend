@@ -15,9 +15,9 @@ const getAll = async (req, res) => {
 const getById = async (req, res) => {
    try {
       const id = req.params.id;
-      const app = await Application.findById(id);
+      const data = await Application.findById(id);
 
-      res.status(200).json({ ok: true, data: app });
+      res.status(200).json({ ok: true, data });
    } catch (error) {
       res.status(500).json({
          ok: false,
@@ -67,7 +67,7 @@ const updateApplication = async (req, res) => {
 const deleteApplication = async (req, res) => {
    try {
       const _id = req.params.id;
-      await Application.deleteOne({_id});
+      await Application.findByIdAndDelete(_id);
 
       res.status(200).json({ok: true})
    } catch (error) {
