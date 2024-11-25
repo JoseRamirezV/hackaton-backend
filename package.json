@@ -3,6 +3,7 @@
    "version": "1.0.0",
    "main": "index.js",
    "scripts": {
+      "dev": "nodemon --env-file=.env src/index.js",
       "test": "echo \"Error: no test specified\" && exit 1"
    },
    "keywords": [],
@@ -18,8 +19,11 @@
    "imports": {
       "#controllers/*": "./src/controllers/*.js",
       "#models/*": "./src/models/*.js",
-      "#config/*": "./src/config/*.js",
       "#routes/*": "./src/routes/*.js",
       "#middlewares/*": "./src/middlewares/*.js"
+   },
+   "devDependencies": {
+      "morgan": "^1.10.0",
+      "nodemon": "^3.1.7"
    }
 }
