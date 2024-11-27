@@ -5,7 +5,6 @@ module.exports = (req, res, next) => {
    if (!token) {
       res.status(401).send({ message: 'Acceso no autorizado!' });
    } else {
-      console.log(process.env.SECRET_KEY);
       jwt.verify(token, process.env.SECRET_KEY, (err, payload) => {
          if (err) {
             res.status(401).send({ error: 'Acceso no autorizado!' });
